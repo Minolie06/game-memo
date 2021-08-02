@@ -24,6 +24,10 @@
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase	;
 }
 
 /* flip-card animation */
