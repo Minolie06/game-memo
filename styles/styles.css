@@ -15,6 +15,10 @@
 	perspective: 1000px;
 }
 
+.card:hover {
+	cursor: pointer;
+}
+
 .card-front {
   background-color: black;
   color: white;
@@ -54,7 +58,7 @@
 }
 
 /* disabling flipped cards */
-.flipped {
+.flipped, .locked {
 	pointer-events: none;
 }
 
