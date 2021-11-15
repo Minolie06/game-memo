@@ -3,10 +3,16 @@
 	<head>
 		<title>Memory Game: Match the cards</title>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="styles/reset.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="script/script.js" defer></script>
+
 	</head>
 	<body>
-		<section id="game-cards" class="game-cards">
+		<h1>Memory Game: match the cards</h1>
+		<div id="game-cards" class="game-cards">
 			<div class="card" data="chat">
 				<div class="card-inner">
 					<div class="card-front"></div>
@@ -135,10 +141,9 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="controls">
-			<button type="button" id="replay">Rejouer</button>
-		</section>
-		<script src="script/script.js"></script>
+		</div>
+		<div class="controls">
+			<button type="button" id="replay">Restart</button>
+		</div>
 	</body>
 </htmlW

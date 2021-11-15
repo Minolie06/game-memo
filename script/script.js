@@ -78,4 +78,5 @@ cards.forEach(card => card.addEventListener("click", function() {
 //controls events
 document.getElementById("replay").addEventListener("click", gameOver);
 
-window.onload = gameInit;
+window.onload = gameInit; 
+
