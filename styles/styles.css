@@ -59,6 +59,7 @@ button:hover {
 	aspect-ratio: 1;
 	perspective: 1000px;
   color:var(--text-color);
+  font-size: 4rem;
 }
 
 .card:hover {
