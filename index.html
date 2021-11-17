@@ -7,143 +7,19 @@
 		<link rel="stylesheet" href="styles/reset.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="script/script.js" defer></script>
+		<script src="script/script-jq.js" defer></script>
 
 	</head>
-	<body>
+	<body class="">
 		<h1>Memory Game: match the cards</h1>
-		<div id="game-cards" class="game-cards">
-			<div class="card" data="cat">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-cat"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="cat">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-cat"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="dog">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-dog"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="dog">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-dog"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="hippo">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-hippo"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="hippo">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-hippo"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="horse">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-horse"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="horse">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-horse"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="dove">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-dove"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="dove">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-dove"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="fish">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-fish"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="fish">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-fish"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="frog">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-frog"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="frog">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-frog"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="spider">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-spider"></i>
-					</div>
-				</div>
-			</div>
-			<div class="card" data="spider">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<i class="fas fa-spider"></i>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="game-cards" class="game-cards"></div>
 		<div class="controls">
-			<button type="button" id="replay">Restart</button>
+			<button type="button" id="play">Play</button>
+			<!-- <button type="button" id="theme">Change Dark/Light</button> -->
+			<label class="switch">
+				<input type="checkbox" id="theme">
+				<span class="slider"></spab>
+			</label>
 		</div>
 	</body>
 </htmlW

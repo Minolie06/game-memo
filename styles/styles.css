@@ -1,9 +1,16 @@
 /* general styling */
-:root {
+body {
   --card-front-color: rgb(29, 38, 94);
-  --card-back-color: dodgerblue;
+  --card-back-color: #2196f3;
   --text-color: white;
-  --bg-color: #bdd3fd;
+  --bg-color: #cce8ff;
+}
+
+body.dark {
+  --card-front-color: #2196f3;
+  --card-back-color: #00bcd4;
+  --text-color: 222;
+  --bg-color: #222;
 }
 
 * {
@@ -33,15 +40,15 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   border: none;
-  background-color: var(--card-back-color);
+  background-color: var(--card-front-color);
   color: var(--text-color);
   border-radius: 5px;
 }
 
 button:hover {
-  color: var(--card-front-color);
+  color: var(--card-back-color);
   background-color: var(--bg-color);
-  border: 3px solid var(--card-front-color);
+  border: 3px solid var(--card-back-color);
 }
 
 /* styling the card grid */
@@ -105,5 +112,51 @@ button:hover {
 /* disabling flipped cards */
 .flipped, .locked {
 	pointer-events: none;
+}
+
+/* theme toggle switch */
+.switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--card-front-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 3px;
+  background-color: var(--bg-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
 }
 
