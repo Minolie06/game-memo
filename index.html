@@ -7,143 +7,19 @@
 		<link rel="stylesheet" href="styles/reset.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="script/script.js" defer></script>
+		<script src="script/script-jq.js" defer></script>
 
 	</head>
-	<body>
+	<body class="">
 		<h1>Memory Game: match the cards</h1>
-		<div id="game-cards" class="game-cards">
-			<div class="card" data="chat">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>chat</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="chat">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>chat</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="chien">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>chien</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="chien">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>chien</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="elephant">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>elephant</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="elephant">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>elephant</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="koala">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>koala</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="koala">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>koala</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="baleine">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>baleine</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="baleine">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>baleine</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="aigle">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>aigle</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="aigle">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>aigle</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="souris">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>souris</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="souris">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>souris</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="tortue">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>tortue</p>
-					</div>
-				</div>
-			</div>
-			<div id="card-test" class="card" data="tortue">
-				<div class="card-inner">
-					<div class="card-front"></div>
-					<div class="card-back">
-						<p>tortue</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="game-cards" class="game-cards"></div>
 		<div class="controls">
-			<button type="button" id="replay">Restart</button>
+			<button type="button" id="play">Play</button>
+			<!-- <button type="button" id="theme">Change Dark/Light</button> -->
+			<label class="switch">
+				<input type="checkbox" id="theme">
+				<span class="slider"></spab>
+			</label>
 		</div>
 	</body>
 </htmlW
