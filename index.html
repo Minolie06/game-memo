@@ -12,14 +12,23 @@
 	</head>
 	<body class="">
 		<h1>Memory Game: match the cards</h1>
-		<div id="game-cards" class="game-cards"></div>
-		<div class="controls">
-			<button type="button" id="play">Play</button>
-			<!-- <button type="button" id="theme">Change Dark/Light</button> -->
-			<label class="switch">
-				<input type="checkbox" id="theme">
-				<span class="slider"></spab>
-			</label>
+		<div class="display choice" id="choice">
+			<div id="message" class="message">
+				<p id="win-message">You won!</p>
+				<p>Choose an icon-set to start playing :</p>
+			</div>
+			<div id="choiceBtns"></div>
 		</div>
+		<div class="display game" id="game" >
+			<div class="game-cards" id="game-cards"></div>
+			<div class="controls">
+				<button type="button" id="playBtn">Play new game</button>
+				<button id="choiceBtn">Change icons</button>
+			</div>
+		</div>
+		<label class="switch">
+			<input type="checkbox" id="theme">
+			<span class="slider"></spab>
+		</label>
 	</body>
-</htmlW
+</html>

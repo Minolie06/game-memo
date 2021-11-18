@@ -1,8 +1,40 @@
 const ANIMALS = ['cat', 'dog', 'hippo', 'horse', 'dove', 'fish', 'frog', 'spider'];
 const FOOD = ['apple-alt', 'candy-cane', 'carrot', 'cheese', 'pizza-slice', 'hotdog', 'ice-cream', 'hamburger'];
-const CARDS_NUMBER = 16;
+const VEHICLES = ['bicycle', 'car', 'helicopter', 'motorcycle', 'plane', 'rocket', 'ship', 'truck-monster'];
+const SPORTS = ['running', 'table-tennis', 'football-ball', 'basketball-ball', 'futbol', 'skating', 'biking', 'swimmer'];
+const SETTINGS = {
+	'CHOICES': ['animals', 'food', 'vehicles', 'sports'],
+	'ICONS': SPORTS
+};
 
+const CARDS_NUMBER = 16;
 const $board = $('#game-cards');
+
+function createChoiceButtons() {
+	const iconSetsNames =SETTINGS.CHOICES;
+	iconSetsNames.forEach(iconSetName => {
+		const iconSet = eval(iconSetName.toUpperCase());
+		const $btn = $('<button>').text(iconSetName).append($('<br>'));
+		for (let i=0; i < 3; i++) {
+			$('<i>').addClass('fas').addClass(`fa-${iconSet[i]}`).appendTo($btn);
+		}
+		$('#choiceBtns').append($btn);
+		$btn.on('click', function() {
+			chooseIcons(iconSet);
+			display('game');
+			gameStart();
+		})
+	})
+}
+
+function display(box) {
+	$('.display').hide();
+	$(`.display.${box}`).show();
+}
+
+function chooseIcons(icons) {
+	SETTINGS.ICONS = icons;
+}
 
 function gameStart() {
 	$board.empty();
@@ -15,9 +47,9 @@ function gameStart() {
 	})
 }
 
-function createCards() {
+function createCards(icons) {
 	for (let i=0; i < CARDS_NUMBER; i++) {
-		const icon = FOOD[i%8];
+		const icon = SETTINGS.ICONS[i%8];
 		const $card = $('<div>')
 			.attr('data-icon', icon)
 			.addClass('card')
@@ -68,20 +100,31 @@ function checkForMatch() {
 }
 
 function gameOver() {
-	setTimeout(gameStart, 1000);
+	$('#win-message').show();
+	setTimeout(function() {
+		display('choice');
+	}, 1000);
 }
 
-$('#play').on('click', gameStart);
-
-$('#theme').on('change', function() {
-	$('body').toggleClass('dark');
-	localStorage.setItem('darkModeStatus', $('#theme').prop('checked'));
-});
 
 $(document).ready(function(){
 	if(localStorage.getItem('darkModeStatus') == "true") {
 		$('body').addClass('dark');
 		$('#theme').prop('checked', 'checked');
 	}
-	gameStart();
+	createChoiceButtons();
+	$('#win-message').hide();
+	display('choice');
+});
+
+$('#playBtn').on('click', gameStart);
+$('#choiceBtn').on('click', function() {
+	$('#win-message').hide();
+	display('choice');
+});
+
+
+$('#theme').on('change', function() {
+	$('body').toggleClass('dark');
+	localStorage.setItem('darkModeStatus', $('#theme').prop('checked'));
 });

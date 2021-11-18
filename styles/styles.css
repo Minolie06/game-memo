@@ -15,7 +15,6 @@ body.dark {
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -31,17 +30,19 @@ h1 {
   color: var(--card-front-color);
 }
 
+/* styling the controls & message */
+
 button {
-  display: block;
-  margin: 20px auto;
+  display: inline-block;
+  margin: 0 2px;
   padding: 0 1rem;
-  height: 2rem;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   background-color: var(--card-front-color);
   color: var(--text-color);
+  border: 3px solid var(--card-front-color);
   border-radius: 5px;
 }
 
@@ -51,9 +52,46 @@ button:hover {
   border: 3px solid var(--card-back-color);
 }
 
+.choice {
+  text-align: center;
+}
+
+.choice .message {
+  color: var(--card-front-color);
+  margin: 200px 0 20px 0;
+  font-size: 1.3rem;
+}
+
+.choice .message p:first-child {
+  margin-bottom: 125px;
+  font-size: 1.9rem;
+  color: var(--card-back-color);
+}
+
+.choice button {
+  height: 4rem;
+  width: 175px;
+  font-size: 16px;
+}
+
+.choice button .fas {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 26px;
+}
+
+.controls {
+  margin: 20px;
+  text-align: center;
+}
+
+.controls button {
+  height: 2rem;
+}
+
 /* styling the card grid */
 .game-cards {
-  max-width: 800px;
+  max-width: 750px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
   gap: 7px;
@@ -109,7 +147,6 @@ button:hover {
   pointer-events: inherit;
 }
 
-/* disabling flipped cards */
 .flipped, .locked {
 	pointer-events: none;
 }
